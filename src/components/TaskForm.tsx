@@ -15,13 +15,14 @@ export default function TaskForm({ addTask }: TaskFormProps) {
   };
 
   return (
-    <form onSubmit={submit}>
+    <form onSubmit={submit} className="d-flex mb-3">
       <input
+        className="form-control me-2"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="New task..."
+        placeholder="Add a new task..."
       />
-      <button>Add</button>
+      <button className="btn btn-primary">Add</button>
     </form>
   );
 }
